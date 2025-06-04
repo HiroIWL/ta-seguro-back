@@ -44,6 +44,8 @@ app.post("/users", async (req, res) => {
     res.status(400).json({
       message: "Usuário já cadastrado.",
     });
+
+    return;
   }
 
   const newUser = {
