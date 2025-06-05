@@ -3,9 +3,11 @@ import { json } from "milliparsec";
 import "dotenv/config";
 import { MongoClient } from "mongodb";
 import { v4 as uuid } from "uuid";
+import * as cors from "cors";
 
 const app = express();
 app.use(json());
+app.use(cors());
 
 async function getDatabase() {
   const client = new MongoClient(process.env.CONNECTION_STRING);
