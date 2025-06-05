@@ -3,7 +3,7 @@ import { json } from "milliparsec";
 import "dotenv/config";
 import { MongoClient } from "mongodb";
 import { v4 as uuid } from "uuid";
-import * as cors from "cors";
+import cors from "cors";
 
 const app = express();
 app.use(json());
